@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #00ff88);
+            border-radius: 2px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .social-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .card-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .card-link:hover {
+            transform: scale(1.05);
+        }
+
+        /* Social Media Specific Colors */
+        .facebook .social-icon { color: #1877F2; }
+        .facebook .card-link { background-color: #1877F2; }
+
+        .instagram .social-icon { 
+            background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .instagram .card-link { background-color: #E1306C; }
+
+        .whatsapp .social-icon { color: #25D366; }
+        .whatsapp .card-link { background-color: #25D366; }
+
+        .linkedin .social-icon { color: #0077B5; }
+        .linkedin .card-link { background-color: #0077B5; }
+
+        .github .social-icon { color: #333; }
+        .github .card-link { background-color: #333; }
+
+        .x-twitter .social-icon { color: #000000; }
+        .x-twitter .card-link { background-color: #000000; }
+
+        /* Add new website card styles */
+        .website .social-icon { 
+            color: #2ecc71;
+        }
+        .website .card-link { 
+            background-color: #2ecc71;
+        }
+        .website .card-link:hover {
+            background-color: #27ae60;
+        }
+
+        /* Add Gmail card styles */
+        .gmail .social-icon { 
+            color: #EA4335;
+        }
+        .gmail .card-link { 
+            background-color: #EA4335;
+        }
+        .gmail .card-link:hover {
+            background-color: #D33426;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">Mohammed Toulli</h1>
+        <div class="cards-grid">
+     
+            <!-- Website Card -->
+            <div class="card website">
+                <i class="fas fa-globe social-icon"></i>
+                <div class="card-content">
+                    <h3 class="card-title">My Website</h3>
+                    <p class="card-description">Visit my personal website to learn more about my work and projects.</p>
+                    <a href="https://mohammedtoulli.github.io/website/" target="_blank" class="card-link">Visit Website</a>
+                </div>
+            </div>
+
+            <!-- Facebook Card -->
+            <div class="card facebook">
+                <i class="fab fa-facebook social-icon"></i>
+                <div class="card-content">
+                    <h3 class="card-title">Facebook</h3>
+                    <p class="card-description">Connect with us on Facebook for the latest updates and community engagement.</p>
+                    <a href="https://www.facebook.com/mohammed.toulli?locale=fr_FR" target="_blank" class="card-link">Follow on Facebook</a>
+                </div>
+            </div>
+
+            <!-- Instagram Card -->
+            <div class="card instagram">
+                <i class="fab fa-instagram social-icon"></i>
+                <div class="card-content">
+                    <h3 class="card-title">Instagram</h3>
+                    <p class="card-description">Follow our visual journey on Instagram for stunning photos and stories.</p>
+                    <a href="https://www.instagram.com/mohammed_toulli/" target="_blank" class="card-link">Follow on Instagram</a>
+                </div>
+            </div>
+
+            <!-- WhatsApp Card -->
+            <div class="card whatsapp">
+                <i class="fab fa-whatsapp social-icon"></i>
+                <div class="card-content">
+                    <h3 class="card-title">WhatsApp</h3>
+                    <p class="card-description">Get in touch with us directly through WhatsApp for quick responses.</p>
+                    <a href="https://wa.me/212674286365" target="_blank" class="card-link">Chat on WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="card linkedin">
+                <i class="fab fa-linkedin social-icon"></i>
+                <div class="card-content">
+                    <h3 class="card-title">LinkedIn</h3>
+                    <p class="card-description">Connect with us professionally on LinkedIn for business opportunities.</p>
+                    <a href="https://www.linkedin.com/in/mohammed-toulli-04426b33a" target="_blank" class="card-link">Connect on LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- GitHub Card -->
+            <div class="card github">
+                <i class="fab fa-github social-icon"></i>
+                <div class="card-content">
+                    <h3 class="card-title">GitHub</h3>
+                    <p class="card-description">Explore our open-source projects and contribute on GitHub.</p>
+                    <a href="https://github.com/mohammedtoulli" target="_blank" class="card-link">Follow on GitHub</a>
+                </div>
+            </div>
+
+            <!-- X (Twitter) Card -->
+            <div class="card x-twitter">
+                <i class="fab fa-x-twitter social-icon"></i>
+                <div class="card-content">
+                    <h3 class="card-title">X (Twitter)</h3>
+                    <p class="card-description">Stay updated with our latest news and announcements on X.</p>
+                    <a href="https://x.com/mohammed_toulli" target="_blank" class="card-link">Follow on X</a>
+                </div>
+            </div>
+                   <!-- Gmail Card -->
+                   <div class="card gmail">
+                    <i class="fas fa-envelope social-icon"></i>
+                    <div class="card-content">
+                        <h3 class="card-title">Gmail</h3>
+                        <p class="card-description">Contact me via email for professional inquiries and collaborations.</p>
+                        <a href="mailto:mohammedtoulli2006@gmail.com"  target="_blank" class="card-link">Send Email</a>
+                    </div>
+                </div>
+    
+        </div>
+    </div>
+</body>
+</html>
