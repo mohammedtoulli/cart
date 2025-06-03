@@ -1,1 +1,185 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relevé d'Identité Bancaire - CIH BANK</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4px solid #ff5e00;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      height: 40px;
+      max-width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.5rem;
+    }
+
+    .info, .rib-section {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .info table, .rib-section table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .info td {
+      padding: 8px 0;
+      word-break: break-word;
+    }
+
+    .info td:first-child {
+      width: 40%;
+      padding-right: 10px;
+    }
+
+    .rib-section th, .rib-section td {
+      border: 1px solid #000;
+      text-align: center;
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+
+    .rib-section p {
+      margin: 10px 0;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #555;
+      text-align: justify;
+    }
+
+    /* Media Queries for Mobile */
+    @media screen and (max-width: 480px) {
+      body {
+        margin: 10px;
+      }
+
+      .header img {
+        height: 30px;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .info td, .rib-section th, .rib-section td {
+        font-size: 0.8rem;
+        padding: 6px 4px;
+      }
+
+      .rib-section p {
+        font-size: 0.8rem;
+      }
+
+      .footer {
+        font-size: 0.7rem;
+      }
+    }
+
+    /* Media Queries for Tablets */
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+      body {
+        margin: 15px;
+      }
+
+      .header img {
+        height: 35px;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/CIH_Bank_logo.svg" alt="CIH Bank Logo">
+  </div>
+
+  <h2>Relevé d'Identité Bancaire</h2>
+
+  <div class="info">
+    <table>
+      <tr>
+        <td><strong>Intitulé du compte</strong></td>
+        <td>: MOHAMMED TOULLI</td>
+      </tr>
+      <tr>
+        <td><strong>Agence du client</strong></td>
+        <td>: SAFI PRINCIPALE</td>
+      </tr>
+      <tr>
+        <td><strong>Adresse de votre agence</strong></td>
+        <td>: 28, AVENUE MOHAMED BEN ABDELLAH SAFI</td>
+      </tr>
+      <tr>
+        <td><strong>Téléphone de votre agence</strong></td>
+        <td>: 05 24 62 52 62/27</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="rib-section">
+    <table>
+      <thead>
+        <tr>
+          <th>Code Banque</th>
+          <th>Code Ville</th>
+          <th>N° Compte</th>
+          <th>Clé RIB</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>230</td>
+          <td>590</td>
+          <td>5888376211002500</td>
+          <td>66</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>I.B.A.N.</strong>: MA64 2305 9058 8837 6211 0025 0066</p>
+    <p><strong>B.I.C / SWIFT</strong>: CIHMMAMC</p>
+  </div>
+
+  <div class="footer">
+    <p>Le site internet www.cihnet.co.ma est mis par CIH BANK, Société anonyme au conseil d'administration au capital de 2.060.880.500 DIRHAMS, R.C : 2629 Casablanca - Siège social : 187, Avenue Hassan II 20 048 Casablanca Maroc.</p>
+  </div>
+
+</body>
+</html>
